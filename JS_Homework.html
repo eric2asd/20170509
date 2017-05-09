@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>20170509Homework</title>
+	
+<script>
+
+function Button1_onclick() {
+	var treeHeight = txt1.value;
+	var treeGraphics = txt2.value ;
+	var result = " ";
+
+	for (var i = 1; i <= treeHeight ; i++) {
+		for (var j = 1; j <= i ; j++){
+			result=result+treeGraphics ;
+			
+		}
+		
+		result+= "<br>";
+	}
+
+	debug.innerHTML = result;
+}
+
+
+</script>
+
+
+
+</head>
+<body>
+ 	高度:
+	<input type="text" id="txt1" name="txt1" value=5 PlaceHolder="Keyin something" size="40">
+	<br><br>
+	<input type="button" id="Button1" name="Button1"   
+		value="2. 點我一下，執行 JavaScript" onclick="Button1_onclick()">
+	<br><br>
+	圖案:
+    <INPUT type="text" id="txt2"  name="txt2" value="*" size="40">
+    <br>
+  輸出圖案樹：
+  	<br>
+    <div id="debug"></div>
+</body>
+</html>
